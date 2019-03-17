@@ -1276,7 +1276,7 @@ class Song(models.Model):
         """
 
         return self.status in ['K', 'N'] or not self.file \
-               or (hasattr(self, 'legacy_flag') and self.legacy_flag != ' ')
+               or (hasattr(self, 'legacy_flag') and self.legacy_flag in ['M', 'R'])
 
     def can_be_replaced(self):
         """
